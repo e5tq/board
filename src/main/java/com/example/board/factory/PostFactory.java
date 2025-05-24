@@ -30,4 +30,13 @@ public class PostFactory {
 		post.setUpdatedDate(current);
 		return post;
 	}
+
+	public static Post updatePost(Post target, Post form) {
+		target.setAuthor(form.getAuthor());
+		target.setTitle(form.getTitle());
+		target.setBody(form.getBody());
+		target.setUpdatedDate(new Date());
+		return target;
+	}
+
 }
